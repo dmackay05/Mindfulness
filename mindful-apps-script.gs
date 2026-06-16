@@ -37,7 +37,15 @@ function doPost(e) {
 
 function doGet(e) {
   try {
-    return ContentService.createTextOutput(JSON.stringify({ entries: readEntries() }))
+    var data = JSON.stringify({ entries: readEntries() });
+    var cb = e && e.parameter && e.parameter.callback;
+    if (cb) {
+      return ContentService
+        .createTextOutput(cb + '(' + data + ')')
+        .setMimeType(ContentService.MimeType.JAVASCRIPT);
+    }
+    return ContentService
+      .createTextOutput(data)
       .setMimeType(ContentService.MimeType.JSON);
   } catch (err) {
     return ContentService.createTextOutput(JSON.stringify({ ok: false, error: err.message }))
