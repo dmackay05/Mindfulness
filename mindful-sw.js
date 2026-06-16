@@ -1,6 +1,6 @@
 const CACHE = 'still-v1';
 const SHELL = [
-  './david-mindful.html',
+  './index.html',
   './mindful-icon-192.png',
   './mindful-icon-512.png',
   './mindful.webmanifest',

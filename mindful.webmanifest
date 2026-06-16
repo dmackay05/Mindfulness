@@ -2,7 +2,7 @@
   "name": "Still — Daily Practice",
   "short_name": "Still",
   "description": "Mindfulness, Stoic journaling, and daily practice tracker",
-  "start_url": "./david-mindful.html",
+  "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#0d0d1a",
   "theme_color": "#0d0d1a",
